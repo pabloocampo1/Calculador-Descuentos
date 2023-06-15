@@ -1,0 +1,44 @@
+
+@media (max-width:600px) {
+    .menu-destok{
+        display: none;
+    }
+
+}
+
+@media (min-width:600px) {
+    
+    .header-title{
+        padding-left: 50px;
+    }
+    
+    .menu-destok li a{
+       font-size: 18px;
+       font-weight:700;
+       text-decoration: none;
+    }
+    .icon-open-menu-mobile{
+        display: none;
+    }
+    .icon-darkmode{
+        width: 35px;
+    }
+    .icon-traduction{
+        width: 35px;
+    }
+    .menu-mobile{
+        display: none;
+    }
+    .main{
+        height: 50vh;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        
+    }
+
+    .footer{
+        position: absolute;
+        bottom:0 ;
+    }
+    
+        
+}

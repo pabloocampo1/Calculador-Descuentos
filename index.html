@@ -5,8 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./mediaQuerysCss/table.css">
+   <link rel="stylesheet" href="./mediaQuerysCss/destok.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,400&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    <header class="header">
+     <div class="header-title">Calculador<span>Porcentajes</span></div>
+    <nav class="header-nav">
+        <!-- icon del menu mobile -->
+        <img class="icon-open-menu-mobile" src=".//svg-icon/noun-mobile-menu-345384.svg" alt="icon menu mobile">
+        <div class="menu-destok">
+            <ul>
+                <li><a href="">about us</a></li>
+                <li><img class="icon-darkmode " src=".//svg-icon/noun-moon-5509214.svg" alt="darkmode icon"><img class="sun inactive" src="./svg-icon/noun-sun-5695284.svg" alt="sun"></li>
+                <li><img class="icon-traduction"  src=".//svg-icon/noun-english-5148454.svg" alt="cambio de idioma icon"> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- menu mobile -->
+    <div class="menu-mobile inactive">
+        <ul>
+            <li><a href="">about us</a></li>
+            <li><img class="icon-darkmodeMobile" src=".//svg-icon/noun-moon-5509214.svg" alt="darkmode icon"></li>
+            <li><img class="icon-traduction"  src=".//svg-icon/noun-english-5148454.svg" alt="cambio de idioma icon"> </li>
+            <li><img class="icon-exit"  src="./svg-icon/noun-exit-1785608.svg" alt="salir del modo menu mobile icon"></li>
+        </ul>
+       <div class="title-container">
+        <div class="header-title title">Calculador<span>Porcentajes</span></div>
+       </div>
+    </div>
+    </header>
+
+    <!-- main -->
     
+    <main class="main">
+        <section class="main-intro">
+            <div class="main-intro_container">
+               <h2>Calcula el porcentaje de tus compras<img src=".//svg-icon/noun-sale-2126907.svg" alt="logo de descuento"></h2>
+               <p>incresa el valor y luego el descuento que tiene el producto, y automaticamente te calcula el valor final con su descuento y el total que te ahorras del descuento.</p>
+            </div>
+        </section>
+        <section class="main-calculador">
+            <div class="main-calculador_container">
+                <h3>total venta</h3>
+                <form action="">
+                    <label for="valorIncresado">Ingrese el valor<span>$</span></label><br>
+                    <input type="number" placeholder="increse el valor neto" id="valorIncresado">
+                    <br>
+                    <br>
+                    <label for="valorDescuento">Ingrese el descuento<span>%</span></label><br>
+                    <input type="number" placeholder="increse el descuento" id="valorDescuento">
+                    <br>
+                    <button type="button">Calcular</button>
+                </form>
+            </div>
+        </section>
+        <section class="main-resultado">
+            <div class="main-resultado_container">
+               <h3>Resumen de venta</h3>
+               <p>Total de venta $: <span>424</span></p>
+               <p>Ahorro $: <span>242</span></p>
+               <p>Total a pagar %: <span>2342</span></p>
+               <img src="./img/discount-stamp-4.png" alt="imagen de descuento">
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <p>by Pablo Ocampo💙</p>
+    </footer>
+   <script src="./main.js"></script> 
 </body>
 </html>
