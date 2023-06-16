@@ -11,7 +11,10 @@
     --gris-oscuro:rgb(33, 32, 32);
     --gris-claro:rgb(91, 89, 89);
     --black:#000000;
-    --purple:rgb(166, 14, 242);
+    --purple:rgb(178, 33, 250);
+    /* background-color */
+    --bg-darkmode-night:rgb(49, 49, 49);
+    --bg-darkmode-inactive:rgb(255, 255, 255);
 }
 
 
@@ -28,7 +31,7 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
-   
+   background-color: var(--bg-darkmode-inactive);
 }
 
 .inactive{
@@ -36,6 +39,12 @@ body{
 }
 .active{
  display: inline-block;
+}
+.ltDarkmode{
+    color: #000000;
+}
+.darkmodeactive{
+    color: #ffffff;
 }
 
 /* header */
@@ -52,7 +61,6 @@ body{
 .header-title{
 width: 100%;
 height: auto;
-color: var(--gris-oscuro);
 font-size: var(--font-size-medium);
 font-weight: var(--font-weight-700);
 padding-left: 10px;
@@ -72,7 +80,9 @@ padding-left: 10px;
 .menu-destok{
     width:70%;
 }
-
+.menu-destok .Sun{
+    width: 40px;
+}
 .menu-destok li a{
     font-size: 18px;
     text-decoration: none;    
@@ -126,7 +136,16 @@ padding-left: 10px;
 .icon-darkmodeMobile{
     width: 40px;
 }
+.Sun-mobile{
+    width: 40px;
+}
 .icon-traduction{
+    width: 40px;
+}
+.icon-traductionen{
+    width: 40px;
+}
+.icon-traductionEnMobile{
     width: 40px;
 }
 .icon-exit{
@@ -160,12 +179,10 @@ padding-left: 10px;
     width: 25px;
 }
 .main-intro_container h2{
-    color: var(--black);
     font-weight: var(--font-weight-700);
     padding-bottom: 10px;
 }
 .main-intro_container p{
-    color: var(--gris-claro);
     font-weight: var(--font-weight-500);
     line-height: 20px;
 }
@@ -189,7 +206,6 @@ padding-left: 10px;
     color: var(--purple);
 }
 .main-calculador_container label{
-    color:var(--gris-oscuro);
     font-weight: bold;
 }
 .main-calculador_container label span{
@@ -245,6 +261,7 @@ padding-left: 10px;
     padding-bottom:10px;
     font-weight: var(--font-weight-700);
     text-align: center;
+    line-height:30px ;
 }
 .main-resultado_container span{
     color: var(--purple);
@@ -262,5 +279,5 @@ padding-left: 10px;
 .footer p{
     padding-top: 10px;
     text-align: center;
-    color: var(--whrite);
+   
 }

@@ -15,27 +15,103 @@ cerrarMenuMobile.addEventListener('click', function(){
 });
 
 //DarkMode destok
+const sunDarkmode = document.querySelector('.Sun');
 const darkmodeDestok = document.querySelector('.icon-darkmode');
 const body = document.querySelector('body');
+const letrasDarkmode =  document.querySelector('.ltDarkmode');
+const title = document.querySelector('.header-title');
+const titleIntro = document.querySelector('.title-intro');
+const descriptionIntro = document.querySelector('.description-intro');
+const ventaTotal = document.querySelector('.venta-total');
+const ahorro = document.querySelector('.ahorro');
+const precioFinal = document.querySelector('.precio-final');
+const about = document.querySelector('.about');
+
+
 
 darkmodeDestok.addEventListener('click', function(){
-darkmodeDestok.classList.contains('inactive')
- body.style.backgroundColor = 'red';
+ darkmodeDestok.classList.add('inactive')
+ sunDarkmode.classList.remove('inactive')
+ body.style.backgroundColor = 'var( --bg-darkmode-night)';
+ title.classList.add('darkmodeactive');
+ titleIntro.classList.add('darkmodeactive');
+ descriptionIntro.classList.add('darkmodeactive');
+ ventaTotal.classList.add('darkmodeactive');
+ ahorro.classList.add('darkmodeactive');
+ precioFinal.classList.add('darkmodeactive');
+ about.classList.add('darkmodeactive');
 
 });
 
-//darkmode mobile
-const darkmodeMobile = document.querySelector('.icon-darkmodeMobile');
-darkmodeMobile.addEventListener('click', function(){
-    menuMobile.classList.add('inactive');
-    darkmodeMobile.setAttribute('src', './svg-icon/noun-sun-5695284.svg')
-    body.style.backgroundColor = 'red';
-});
-
-const sunDarkmode = document.querySelector('.sun');
 
 sunDarkmode.addEventListener('click', function(){
-    alert("si dio perra, que buen programador eres");
-})
+    body.style.backgroundColor = 'white';
+    darkmodeDestok.classList.remove('inactive')
+    sunDarkmode.classList.add('inactive')
+    title.classList.remove('darkmodeactive');
+    titleIntro.classList.remove('darkmodeactive');
+    descriptionIntro.classList.remove('darkmodeactive');
+    ventaTotal.classList.remove('darkmodeactive');
+    ahorro.classList.remove('darkmodeactive');
+    precioFinal.classList.remove('darkmodeactive');
+    about.classList.remove('darkmodeactive');
+});
+
+
+
+//darkmode mobile
+
+
+const darkmodeMobile = document.querySelector('.icon-darkmodeMobile');
+const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
+
+
+    darkmodeMobile.addEventListener('click', function(){
+    menuMobile.classList.add('inactive');
+    darkmodeMobile.classList.add('inactive')
+    sunDarkmodeMobile.classList.remove('inactive')
+    body.style.backgroundColor = 'var( --bg-darkmode-night)';
+    title.classList.add('darkmodeactive');
+    titleIntro.classList.add('darkmodeactive');
+    descriptionIntro.classList.add('darkmodeactive');
+    ventaTotal.classList.add('darkmodeactive');
+    ahorro.classList.add('darkmodeactive');
+    precioFinal.classList.add('darkmodeactive');
+    about.classList.add('darkmodeactive');
+   
+   });
+   
+   
+   sunDarkmodeMobile.addEventListener('click', function(){
+    
+       body.style.backgroundColor = 'white';
+       darkmodeMobile.classList.remove('inactive')
+       menuMobile.classList.add('inactive');
+       sunDarkmodeMobile.classList.add('inactive')
+       title.classList.remove('darkmodeactive');
+       titleIntro.classList.remove('darkmodeactive');
+       descriptionIntro.classList.remove('darkmodeactive');
+       ventaTotal.classList.remove('darkmodeactive');
+       ahorro.classList.remove('darkmodeactive');
+       precioFinal.classList.remove('darkmodeactive');
+       about.classList.remove('darkmodeactive');
+   });
+
+
+   //cambio de idioma a ingles
+
+   const cambioDeIdioma = document.querySelector('.icon-traduction');
+
+   cambioDeIdioma.addEventListener('click', function(){
+     location.href = './indexEn.html';
+   });
+
+   //cambio de idioma a español
+
+   const cambioIdiomaEn = document.querySelector('.icon-traductionen');
+
+   cambioIdiomaEn.addEventListener('click', function(){
+    location.href = './index.html';
+   });
 
 
