@@ -65,8 +65,9 @@ font-size: var(--font-size-medium);
 font-weight: var(--font-weight-700);
 padding-left: 10px;
 }
-.header-title a{
+.header-title-a{
     text-decoration: none;
+   
 }
 .header-title span{
    color: var(--purple);
