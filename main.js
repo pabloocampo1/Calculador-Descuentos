@@ -22,14 +22,15 @@ const letrasDarkmode =  document.querySelector('.ltDarkmode');
 const title = document.querySelector('.header-title');
 const titleIntro = document.querySelector('.title-intro');
 const descriptionIntro = document.querySelector('.description-intro');
-const ventaTotal = document.querySelector('.venta-total');
-const ahorro = document.querySelector('.ahorro');
-const precioFinal = document.querySelector('.precio-final');
+const ventaTotal = document.querySelector('.venta-total-color');
+const descuentoSeleccionado = document.querySelector('.descuento-color');
+const precioFinal = document.querySelector('.precio-final-color');
 const about = document.querySelector('.about');
 
 
 
 darkmodeDestok.addEventListener('click', function(){
+
  darkmodeDestok.classList.add('inactive')
  sunDarkmode.classList.remove('inactive')
  body.style.backgroundColor = 'var( --bg-darkmode-night)';
@@ -37,7 +38,7 @@ darkmodeDestok.addEventListener('click', function(){
  titleIntro.classList.add('darkmodeactive');
  descriptionIntro.classList.add('darkmodeactive');
  ventaTotal.classList.add('darkmodeactive');
- ahorro.classList.add('darkmodeactive');
+ descuentoSeleccionado.classList.add('darkmodeactive');
  precioFinal.classList.add('darkmodeactive');
  about.classList.add('darkmodeactive');
 
@@ -52,7 +53,7 @@ sunDarkmode.addEventListener('click', function(){
     titleIntro.classList.remove('darkmodeactive');
     descriptionIntro.classList.remove('darkmodeactive');
     ventaTotal.classList.remove('darkmodeactive');
-    ahorro.classList.remove('darkmodeactive');
+    descuentoSeleccionado.classList.remove('darkmodeactive');
     precioFinal.classList.remove('darkmodeactive');
     about.classList.remove('darkmodeactive');
 });
@@ -75,7 +76,7 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
     titleIntro.classList.add('darkmodeactive');
     descriptionIntro.classList.add('darkmodeactive');
     ventaTotal.classList.add('darkmodeactive');
-    ahorro.classList.add('darkmodeactive');
+    descuentoSeleccionado.classList.add('darkmodeactive');
     precioFinal.classList.add('darkmodeactive');
     about.classList.add('darkmodeactive');
    
@@ -92,26 +93,42 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
        titleIntro.classList.remove('darkmodeactive');
        descriptionIntro.classList.remove('darkmodeactive');
        ventaTotal.classList.remove('darkmodeactive');
-       ahorro.classList.remove('darkmodeactive');
+       descuentoSeleccionado.classList.remove('darkmodeactive');
        precioFinal.classList.remove('darkmodeactive');
        about.classList.remove('darkmodeactive');
    });
 
 
-   //cambio de idioma a ingles
+//calculador de descuento y resumen
+const buttonCalcular = document.querySelector('.button-calculador');
+const buttonBorrar = document.querySelector('.button-borrar');
+const valorTotal = document.querySelector('.venta-total');
+const DescuentoSelect = document.querySelector('.descuento-select');
+const valorFinal = document.querySelector('.precio-final');
 
-   const cambioDeIdioma = document.querySelector('.icon-traduction');
+buttonCalcular.addEventListener('click', calcularDescuento);
+buttonBorrar.addEventListener('click', borrarContenidoDelResulem);
 
-   cambioDeIdioma.addEventListener('click', function(){
-     location.href = './indexEn.html';
-   });
+function calcularDescuento(){
+    const valorIngresado = document.getElementById('valor-ingresado').value;
+    const valorDescuento = document.getElementById('valorDescuento').value;
 
-   //cambio de idioma a español
+    descuento = (valorIngresado * (100 - valorDescuento) / 100);
 
-   const cambioIdiomaEn = document.querySelector('.icon-traductionen');
+    valorTotal.innerHTML = valorIngresado;
+    DescuentoSelect.innerHTML = `${valorDescuento}%`;
+    valorFinal.innerHTML = descuento;
+};
 
-   cambioIdiomaEn.addEventListener('click', function(){
-    location.href = './index.html';
-   });
+function borrarContenidoDelResulem(){
+    valorTotal.innerHTML = 0;
+    DescuentoSelect.innerHTML ="0%";
+    valorFinal.innerHTML = 0;
+};
+
+
+
+   
+   
 
 

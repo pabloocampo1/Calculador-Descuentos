@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 </head>
 <body>
     <header class="header">
-     <div class="header-title">Calculador<span>Porcentajes</span></div>
+     <div class="header-title"><a href="http://127.0.0.1:5500/index.html">Calculador<span>Porcentajes</span></a></div>
     <nav class="header-nav">
         <!-- icon del menu mobile -->
         <img class="icon-open-menu-mobile" src=".//svg-icon/noun-mobile-menu-345384.svg" alt="icon menu mobile">
@@ -23,7 +23,7 @@
             <ul>
                 <li><a class="about" href="">about us</a></li>
                 <li><img class="icon-darkmode " src=".//svg-icon/noun-moon-5509214.svg" alt="darkmode icon"><img class="Sun inactive" src="./svg-icon/noun-sun-5695284.svg" alt="sun"></li>
-                <li><img class="icon-traduction"  src=".//svg-icon/noun-english-5148454.svg" alt="cambio de idioma icon"> </li>
+                <li><a href="./indexEn.html"><img class="icon-traduction"  src=".//svg-icon/noun-english-5148454.svg" alt="cambio de idioma icon"></a> </li>
             </ul>
         </div>
     </nav>
@@ -33,11 +33,11 @@
         <ul>
             <li><a href="">about us</a></li>
             <li><img class="icon-darkmodeMobile" src=".//svg-icon/noun-moon-5509214.svg" alt="darkmode icon"><img class="Sun-mobile inactive" src="./svg-icon/noun-sun-5695284.svg" alt="sun"></li>
-            <li><img class="icon-traduction"  src=".//svg-icon/noun-english-5148454.svg" alt="cambio de idioma icon"> </li>
+            <li><a href="./indexEn.html"><img class="icon-traduction"  src=".//svg-icon/noun-english-5148454.svg" alt="cambio de idioma icon"></a>  </li>
             <li><img class="icon-exit"  src="./svg-icon/noun-exit-1785608.svg" alt="salir del modo menu mobile icon"></li>
         </ul>
        <div class="title-container">
-        <div class="header-title title">Calculador<span>Porcentajes</span></div>
+        <div class="header-title title"><a href="http://127.0.0.1:5500/index.html">Calculador<span>Porcentajes</span></a></div>
        </div>
     </div>
     </header>
@@ -56,22 +56,23 @@
                 <h3>total venta</h3>
                 <form action="">
                     <label for="valorIncresado">Ingrese el valor<span>$</span></label><br>
-                    <input type="number" placeholder="increse el valor neto" id="valorIncresado">
+                    <input type="number" placeholder="increse el valor neto" id="valor-ingresado">
                     <br>
                     <br>
                     <label for="valorDescuento">Ingrese el descuento<span>%</span></label><br>
-                    <input type="number" placeholder="increse el descuento" id="valorDescuento">
+                    <input type="number" placeholder="increse el descuento"  id="valorDescuento">
                     <br>
-                    <button type="button">Calcular</button>
+                    <button class="button-calculador" type="button">Calcular</button>
+                    <button class="button-borrar" type="reset">borrar</button>
                 </form>
             </div>
         </section>
         <section class="main-resultado">
             <div class="main-resultado_container">
                <h3>Resumen de venta</h3>
-               <p class="venta-total">Total de venta $: <span>424</span></p>
-               <p class="ahorro">Ahorro $: <span>242</span></p>
-               <p class="precio-final">Precio final %: <span>2342</span></p>
+               <p class="venta-total-color">Precio inicial $: <span class="venta-total">0</span></p>
+               <p class="descuento-color">Descuento $: <span class="descuento-select">0%</span></p>
+               <p class="precio-final-color">Precio final %: <span class="precio-final">0</span></p>
                <img src="./img/discount-stamp-4.png" alt="imagen de descuento">
             </div>
         </section>
