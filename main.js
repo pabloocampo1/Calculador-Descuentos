@@ -118,6 +118,10 @@ function calcularDescuento(){
     valorTotal.innerHTML = valorIngresado;
     DescuentoSelect.innerHTML = `${valorDescuento}%`;
     valorFinal.innerHTML = descuento;
+
+    //ahorro final
+
+    const ahorro = (valorIngresado - descuento);
 };
 
 function borrarContenidoDelResulem(){
