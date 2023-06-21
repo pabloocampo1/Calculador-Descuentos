@@ -27,6 +27,7 @@ const descuentoSeleccionado = document.querySelector('.descuento-color');
 const precioFinal = document.querySelector('.precio-final-color');
 const precioAhorro = document.querySelector('.precio-ahorro-color');
 const about = document.querySelector('.about');
+const textoAlert = document.getElementById('text-alert');
 
 
 
@@ -43,6 +44,7 @@ darkmodeDestok.addEventListener('click', function(){
  precioFinal.classList.add('darkmodeactive');
  precioAhorro.classList.add('darkmodeactive')
  about.classList.add('darkmodeactive');
+ textoAlert.classList.add('darkmodeactive');
 
 });
 
@@ -59,6 +61,7 @@ sunDarkmode.addEventListener('click', function(){
     precioFinal.classList.remove('darkmodeactive');
     precioAhorro.classList.remove('darkmodeactive');
     about.classList.remove('darkmodeactive');
+    textoAlert.classList.remove('darkmodeactive');
 });
 
 
@@ -83,6 +86,7 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
     precioFinal.classList.add('darkmodeactive');
     precioAhorro.classList.add('darkmodeactive')
     about.classList.add('darkmodeactive');
+    textoAlert.classList.add('darkmodeactive');
    
    });
    
@@ -101,6 +105,7 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
        precioFinal.classList.remove('darkmodeactive');
        precioAhorro.classList.remove('darkmodeactive')
        about.classList.remove('darkmodeactive');
+       textoAlert.classList.remove('darkmodeactive');
    });
 
 
@@ -147,6 +152,8 @@ function calcularDescuento(){
         textoAlert.innerHTML = "";
         return;
     }
+
+
 
 };
 
