@@ -62,10 +62,12 @@
                     <br>
                     <label for="valorDescuento">Ingrese el descuento<span>%</span></label><br>
                     <input type="number" placeholder="increse el descuento"  id="valorDescuento">
+                    <p id="text-alert"></p>
                     <br>
-                    <button class="button-calculador" type="button">Calcular</button>
+                    <button class="button-calculador" type="button"><a href="#imagen-descuento">Calcular</a></button>
                     <button class="button-borrar" type="reset">borrar</button>
                 </form>
+                
             </div>
         </section>
         <section class="main-resultado">
@@ -75,7 +77,7 @@
                <p class="descuento-color">Descuento %: <span class="descuento-select">0%</span></p>
                <p class="precio-final-color">Precio final $: <span class="precio-final">0</span></p>
                <p class="precio-ahorro-color">tu ahorro $: <span class="precio-ahorro">0</span></p>
-               <img src="./img/discount-stamp-4.png" alt="imagen de descuento">
+               <img id="imagen-descuento" src="./img/discount-stamp-4.png" alt="imagen de descuento">
             </div>
         </section>
     </main>

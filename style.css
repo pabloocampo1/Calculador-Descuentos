@@ -234,6 +234,10 @@ padding-left: 10px;
     background-color: var(--whrite);
    box-shadow: 1px 1px 12px var(--purple);
 }
+.main-calculador_container button a{
+    text-decoration: none;
+    color:var(--gris-claro);
+}
 
 /*section  resultado */
 

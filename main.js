@@ -115,20 +115,39 @@ const ahorroFinal = document.querySelector('.precio-ahorro');
 buttonCalcular.addEventListener('click', calcularDescuento);
 buttonBorrar.addEventListener('click', borrarContenidoDelResulem);
 
+//funcion descuento
+
 function calcularDescuento(){
     const valorIngresado = document.getElementById('valor-ingresado').value;
     const valorDescuento = document.getElementById('valorDescuento').value;
 
-    const descuento = (valorIngresado * (100 - valorDescuento) / 100);
+    const valorIngresadoTOTAL = Number(valorIngresado);
+    const valordescuentoTOTAL = Number(valorDescuento);
 
-    valorTotal.innerHTML = valorIngresado;
-    DescuentoSelect.innerHTML = `${valorDescuento}%`;
+    let descuento = (valorIngresadoTOTAL * (100 - valordescuentoTOTAL)) / 100;
+
+    valorTotal.innerHTML = valorIngresadoTOTAL;
+    DescuentoSelect.innerHTML = `${valordescuentoTOTAL}%`;
     valorFinal.innerHTML = descuento;
 
     //ahorro final
 
-    const ahorro = (valorIngresado - descuento);
+    const ahorro = (valorIngresadoTOTAL - descuento);
     ahorroFinal.innerHTML = ahorro;
+
+    //verificacion de que el descuento no pase de 100%
+
+    const textoAlert = document.getElementById('text-alert');
+
+    if(valordescuentoTOTAL > 100){
+        textoAlert.innerHTML = "no puedes ingresar un descuento mayor a 100%"
+        return;
+    }
+    if(valordescuentoTOTAL < 100){
+        textoAlert.innerHTML = "";
+        return;
+    }
+
 };
 
 function borrarContenidoDelResulem(){
