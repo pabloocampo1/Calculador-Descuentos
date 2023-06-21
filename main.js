@@ -19,7 +19,7 @@ const sunDarkmode = document.querySelector('.Sun');
 const darkmodeDestok = document.querySelector('.icon-darkmode');
 const body = document.querySelector('body');
 const letrasDarkmode =  document.querySelector('.ltDarkmode');
-const title = document.querySelector('.header-title-a');
+const titlePrincipal = document.querySelector('.header-title');
 const titleIntro = document.querySelector('.title-intro');
 const descriptionIntro = document.querySelector('.description-intro');
 const ventaTotal = document.querySelector('.venta-total-color');
@@ -35,7 +35,7 @@ darkmodeDestok.addEventListener('click', function(){
  darkmodeDestok.classList.add('inactive')
  sunDarkmode.classList.remove('inactive')
  body.style.backgroundColor = 'var( --bg-darkmode-night)';
- title.classList.add('darkmodeactive');
+ titlePrincipal.classList.add('darkmodeactive');
  titleIntro.classList.add('darkmodeactive');
  descriptionIntro.classList.add('darkmodeactive');
  ventaTotal.classList.add('darkmodeactive');
@@ -51,7 +51,7 @@ sunDarkmode.addEventListener('click', function(){
     body.style.backgroundColor = 'white';
     darkmodeDestok.classList.remove('inactive')
     sunDarkmode.classList.add('inactive')
-    title.classList.remove('darkmodeactive');
+    titlePrincipal.classList.remove('darkmodeactive');
     titleIntro.classList.remove('darkmodeactive');
     descriptionIntro.classList.remove('darkmodeactive');
     ventaTotal.classList.remove('darkmodeactive');
@@ -75,7 +75,7 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
     darkmodeMobile.classList.add('inactive')
     sunDarkmodeMobile.classList.remove('inactive')
     body.style.backgroundColor = 'var( --bg-darkmode-night)';
-    title.classList.add('darkmodeactive');
+    titlePrincipal.classList.add('darkmodeactive');
     titleIntro.classList.add('darkmodeactive');
     descriptionIntro.classList.add('darkmodeactive');
     ventaTotal.classList.add('darkmodeactive');
@@ -93,7 +93,7 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
        darkmodeMobile.classList.remove('inactive')
        menuMobile.classList.add('inactive');
        sunDarkmodeMobile.classList.add('inactive')
-       title.classList.remove('darkmodeactive');
+       titlePrincipal.classList.remove('darkmodeactive');
        titleIntro.classList.remove('darkmodeactive');
        descriptionIntro.classList.remove('darkmodeactive');
        ventaTotal.classList.remove('darkmodeactive');
