@@ -67,7 +67,7 @@ padding-left: 10px;
 }
 .header-title-a{
     text-decoration: none;
-   
+   color: var(--black);
 }
 .header-title span{
    color: var(--purple);
