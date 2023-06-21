@@ -25,6 +25,7 @@ const descriptionIntro = document.querySelector('.description-intro');
 const ventaTotal = document.querySelector('.venta-total-color');
 const descuentoSeleccionado = document.querySelector('.descuento-color');
 const precioFinal = document.querySelector('.precio-final-color');
+const precioAhorro = document.querySelector('.precio-ahorro-color');
 const about = document.querySelector('.about');
 
 
@@ -40,6 +41,7 @@ darkmodeDestok.addEventListener('click', function(){
  ventaTotal.classList.add('darkmodeactive');
  descuentoSeleccionado.classList.add('darkmodeactive');
  precioFinal.classList.add('darkmodeactive');
+ precioAhorro.classList.add('darkmodeactive')
  about.classList.add('darkmodeactive');
 
 });
@@ -55,6 +57,7 @@ sunDarkmode.addEventListener('click', function(){
     ventaTotal.classList.remove('darkmodeactive');
     descuentoSeleccionado.classList.remove('darkmodeactive');
     precioFinal.classList.remove('darkmodeactive');
+    precioAhorro.classList.remove('darkmodeactive');
     about.classList.remove('darkmodeactive');
 });
 
@@ -78,6 +81,7 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
     ventaTotal.classList.add('darkmodeactive');
     descuentoSeleccionado.classList.add('darkmodeactive');
     precioFinal.classList.add('darkmodeactive');
+    precioAhorro.classList.add('darkmodeactive')
     about.classList.add('darkmodeactive');
    
    });
@@ -95,6 +99,7 @@ const sunDarkmodeMobile = document.querySelector('.Sun-mobile');
        ventaTotal.classList.remove('darkmodeactive');
        descuentoSeleccionado.classList.remove('darkmodeactive');
        precioFinal.classList.remove('darkmodeactive');
+       precioAhorro.classList.remove('darkmodeactive')
        about.classList.remove('darkmodeactive');
    });
 
@@ -105,6 +110,7 @@ const buttonBorrar = document.querySelector('.button-borrar');
 const valorTotal = document.querySelector('.venta-total');
 const DescuentoSelect = document.querySelector('.descuento-select');
 const valorFinal = document.querySelector('.precio-final');
+const ahorroFinal = document.querySelector('.precio-ahorro');
 
 buttonCalcular.addEventListener('click', calcularDescuento);
 buttonBorrar.addEventListener('click', borrarContenidoDelResulem);
@@ -113,7 +119,7 @@ function calcularDescuento(){
     const valorIngresado = document.getElementById('valor-ingresado').value;
     const valorDescuento = document.getElementById('valorDescuento').value;
 
-    descuento = (valorIngresado * (100 - valorDescuento) / 100);
+    const descuento = (valorIngresado * (100 - valorDescuento) / 100);
 
     valorTotal.innerHTML = valorIngresado;
     DescuentoSelect.innerHTML = `${valorDescuento}%`;
@@ -122,12 +128,14 @@ function calcularDescuento(){
     //ahorro final
 
     const ahorro = (valorIngresado - descuento);
+    ahorroFinal.innerHTML = ahorro;
 };
 
 function borrarContenidoDelResulem(){
     valorTotal.innerHTML = 0;
     DescuentoSelect.innerHTML ="0%";
     valorFinal.innerHTML = 0;
+    ahorroFinal.innerHTML = 0;
 };
 
 
